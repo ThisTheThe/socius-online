@@ -75,11 +75,6 @@ export const ChannelList = ({
 
   const handleChannelSelect = (channelId: number) => {
     onChannelSelect(channelId);
-    const channel = channels.find((c) => c.id === channelId);
-    toast({
-      title: "Channel changed",
-      description: `Switched to #${channel?.name}`,
-    });
   };
 
   return (
