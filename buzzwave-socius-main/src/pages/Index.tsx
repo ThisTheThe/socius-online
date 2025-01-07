@@ -21,7 +21,7 @@ const Index = () => {
         </aside>
         <main className="flex-1 ml-64">
           <Navbar />
-          <div className="flex flex-col h-[calc(100vh-4rem)] pt-16">
+          <div className="flex flex-col h-[calc(100vh)] pt-16">
             <MessageList selectedChannelId={selectedChannelId} />
             <MessageInput channelId={selectedChannelId} />
           </div>

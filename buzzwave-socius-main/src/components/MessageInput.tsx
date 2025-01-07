@@ -22,11 +22,6 @@ export const MessageInput = ({ channelId }: MessageInputProps) => {
     // Add the message using the function we exposed on the window
     (window as any).addMessage(message.trim(), channelId, attachments);
     
-    toast({
-      title: "Message sent",
-      description: `Message sent to channel #${channelId}`,
-    });
-    
     setMessage("");
     setAttachments([]);
   };
@@ -54,11 +49,6 @@ export const MessageInput = ({ channelId }: MessageInputProps) => {
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
-
-    toast({
-      title: "Files added",
-      description: `${files.length} file(s) ready to upload`,
-    });
   };
 
   return (
